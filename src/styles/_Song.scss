@@ -1,0 +1,13 @@
+.song-container {
+    @include flexColumn;
+    min-height: 60vh;
+    background-color: $bg;
+    justify-content: center;
+    img.song-cover {
+        width: 200px;
+        border-radius: 50%;
+    }
+    h2 {
+        padding: 3rem 1rem 1rem;
+    }
+}

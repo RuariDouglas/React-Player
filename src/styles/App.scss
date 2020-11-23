@@ -1,5 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,700&display=swap");
+// ------------------ VARIABLES -------------------- //
+$bg: #f5f5dc;
+$dark: #292523;
+// ------------------ @MIXINS --------------------- //
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100%;
+    background-color: $bg;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    color: $dark;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -1px;
+}
+
+@import "./Player";
+@import "./Song";
+@import "./Library";
+@import "./Nav";

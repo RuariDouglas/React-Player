@@ -1,0 +1,19 @@
+nav {
+    background-color: burlywood;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border: 2px solid $dark;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: $dark;
+            color: $bg;
+        }
+    }
+}

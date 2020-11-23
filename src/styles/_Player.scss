@@ -1,0 +1,28 @@
+.player {
+    min-height: 20vh;
+    @include flexColumn;
+    justify-content: space-between;
+}
+
+.time-control {
+    width: 50%;
+    display: flex;
+    input {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    p {
+        padding: 1rem;
+    }
+}
+
+.play-control {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    svg {
+        cursor: pointer;
+    }
+}
