@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 // ------------------ VARIABLES -------------------- //
-$bg: #f5f5dc;
-$dark: #292523;
+$bg: #f7f5ef;
+$darkDark: #16191b;
+$dark: #212529;
+$mid-dark: #2d3236;
+$grey: #6d6875;
+$dark-grey: #635e6d;
 // ------------------ @MIXINS --------------------- //
 @mixin flexColumn {
     display: flex;
@@ -13,14 +17,19 @@ $dark: #292523;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 0.1rem;
 }
 
 body {
     height: 100%;
     background-color: $bg;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: $dark;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 h1,
@@ -33,11 +42,31 @@ h4 {
     font-weight: 300;
 }
 
+button,
 h1,
 h2,
 h3,
 h4 {
-    letter-spacing: -1px;
+    letter-spacing: 0.1px;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.App {
+    transition: all 0.5s ease;
+}
+
+.active {
+    transform: translateX(10rem);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
 }
 
 @import "./Player";

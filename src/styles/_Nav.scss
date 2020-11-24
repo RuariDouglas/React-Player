@@ -1,19 +1,36 @@
 nav {
-    background-color: burlywood;
-    min-height: 10vh;
+    min-height: 90px;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     button {
+        font-weight: 700;
+        font-size: 1rem;
+        display: flex;
         background-color: transparent;
         border: none;
         cursor: pointer;
         border: 2px solid $dark;
-        padding: 0.5rem;
+        padding: 0.5rem 0.8rem;
         transition: all 0.3s ease;
-        &:hover {
-            background-color: $dark;
-            color: $bg;
+        &:hover,
+        &:focus {
+            outline: none;
         }
+        &:hover {
+            .fa-compact-disc {
+                transform: rotate(180deg) scale(1.5);
+            }
+        }
+    }
+}
+
+.fa-compact-disc {
+    transition: all 0.4s ease;
+    transform: rotate(0) scale(1.5);
+    margin-left: 10px;
+    path {
+        fill: $dark;
     }
 }

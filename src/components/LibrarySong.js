@@ -1,27 +1,16 @@
 import React from "react";
 
-const LibrarySong = ({ song, songs, setCurrentSong, id, setSongs }) => {
+const LibrarySong = ({ song, setCurrentSong, currentSong }) => {
   const songSelectHandler = () => {
     setCurrentSong(song);
   };
 
-  const updatedSongs = () => {
-    setSongs(
-      songs.map((targetSong) => {
-        return {
-          ...targetSong,
-          active: targetSong.id === song.id,
-        };
-      })
-    );
-  };
   return (
     <div
       // We can add classes if conditions are passed, directly in the event handler
-      className={`library-song ${song.active ? "selected" : ""}`}
+      className={`library-song ${song.id === currentSong.id ? "selected" : ""}`}
       onClick={() => {
         songSelectHandler();
-        updatedSongs();
       }}
     >
       <img alt={song.name} src={song.cover}></img>

@@ -1,19 +1,37 @@
 .library {
     @include flexColumn;
-    background-color: #f5f5dc;
+    background-color: $dark;
     position: fixed;
     width: 20rem;
     top: 0;
     left: 0;
-    padding-top: 2rem;
     height: 100%;
-    box-shadow: 2px 2px 50px rgba(126, 126, 126, 0.3);
+    box-shadow: 2px 2px 30px rgb(148, 148, 148);
     overflow: scroll;
     transform: translateX(-100%);
     transition: all 0.5s ease;
     opacity: 0;
-    h2 {
-        margin-bottom: 1rem;
+    color: $bg;
+}
+
+.library-head {
+    width: 100%;
+    min-height: 90px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    justify-content: space-between;
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        .fa-times {
+            transform: scale(1.5);
+            path {
+                fill: $bg;
+            }
+        }
     }
 }
 
@@ -22,31 +40,58 @@
     opacity: 1;
 }
 
+.library-songs {
+    @include flexColumn;
+}
+
 .library-song {
     display: flex;
     align-items: center;
-    padding: 1.2rem;
+    padding: 1rem 2rem 1rem 2rem;
     cursor: pointer;
+    transition: all 0.43s ease-out;
     img {
-        box-shadow: 2px 2px 10px rgba(126, 126, 126, 0.3);
         width: 30%;
-        border-radius: 50%;
     }
     &:hover {
-        background-color: rgba(223, 223, 200, 0.6);
+        background: $darkDark;
     }
 }
 
 .song-description {
-    padding: 1rem;
+    padding-left: 1rem;
     h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     h4 {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }
 
 .selected {
-    background-color: burlywood;
+    background-color: $mid-dark;
+    transition: all 0.43s ease-out;
+    .song-description {
+        color: #6d6875;
+    }
+    &:hover {
+        background-color: $mid-dark;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .library {
+        h1 {
+            width: 20px;
+        }
+        width: 100vw;
+        align-items: center;
+    }
+    .library-head {
+        button {
+            .fa-times {
+                transform: scale(2);
+            }
+        }
+    }
 }

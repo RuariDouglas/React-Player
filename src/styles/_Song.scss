@@ -1,13 +1,39 @@
 .song-container {
-    @include flexColumn;
     min-height: 60vh;
     background-color: $bg;
+    @include flexColumn;
     justify-content: center;
-    img.song-cover {
-        width: 200px;
+    transition: all 0.5s ease;
+    img {
+        min-width: 350px;
+        width: 30%;
+        max-width: 450px;
         border-radius: 50%;
+        margin-bottom: 1rem;
     }
-    h2 {
-        padding: 3rem 1rem 1rem;
+    h3 {
+        font-size: 1rem;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .song-container {
+        img {
+            min-width: 200px;
+            width: 60%;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotateSong {
+    animation: rotate 20s linear forwards infinite;
 }

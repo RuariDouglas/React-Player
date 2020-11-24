@@ -27,6 +27,7 @@ function App() {
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
+    animationPercentage: 0,
   });
   // 2.
   const [songs, setSongs] = useState(data());
@@ -40,21 +41,31 @@ function App() {
   return (
     <div className="App">
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
+      <Song
+        isPlaying={isPlaying}
+        libraryStatus={libraryStatus}
+        currentSong={currentSong}
+      />
       <Player
+        songs={songs}
+        setSongs={setSongs}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
         audioRef={audioRef}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
+        libraryStatus={libraryStatus}
       />
       <Library
+        currentSong={currentSong}
         audioRef={audioRef}
         setCurrentSong={setCurrentSong}
         songs={songs}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
       />
     </div>
   );
