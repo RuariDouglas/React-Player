@@ -4,6 +4,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.43s ease-out;
     button {
         font-weight: 700;
         font-size: 1rem;

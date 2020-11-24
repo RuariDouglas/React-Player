@@ -28,6 +28,10 @@
         cursor: pointer;
         .fa-times {
             transform: scale(1.5);
+            &:focus {
+                outline: none;
+                border: none;
+            }
             path {
                 fill: $bg;
             }

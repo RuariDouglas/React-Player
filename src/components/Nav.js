@@ -4,7 +4,7 @@ import { faCompactDisc } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = ({ libraryStatus, setLibraryStatus }) => {
   return (
-    <nav>
+    <nav className={`${libraryStatus ? "active" : ""}`}>
       <h1>MUSI¢</h1>
       <button onClick={() => setLibraryStatus(!libraryStatus)}>
         Library
