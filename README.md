@@ -4,10 +4,10 @@ React music player with functionality as expected: Play/Pause, Skip Forward/Back
 
 ## About the build
 
-This was my first app made in React and an oppurtunity to familiarise myself with the core concepts I've been learning. Specifically, these were: 
-- Props (Passing & Drilling)
-- React Events
-- State (Modifying, Passing & Lifting)
-- UUID
-- Creating & Styling Components
-- Hooks (useEffect, useState, useRef)
+This was really just an oppurtunity to familiarise myself with
+                the core concepts I had been learning at the time such as:
+                - Passing, deconsturcting and drilling props.
+                - Modifying, passing and lifting state.
+                - Working with hooks such as useRef for capturing input values,
+                usEffect and useState.
+                
